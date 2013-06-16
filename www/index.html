@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+  <head>
+    <link href="" rel="stylesheet" media="screen" type="text/css" />
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="tactics.js"></script>
+    <style>
+      body {
+        margin: 0;
+      }
+      #puzzle-container {
+        margin:2em auto;
+        width: 20em;
+      }
+      #puzzle-next-btn {
+        height: 3em;
+        width: 15em;
+        margin-bottom: 2em;
+      }
+      #puzzle-next-btn:hover {
+        box-shadow: blue 0 0 5px;
+      }
+      #puzzle-footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+      }
+      #puzzle {
+        border: 1px dotted #888;
+        width: 264px;
+        height: 264px;
+        overflow: hidden;
+        letter-spacing: 0;
+        line-height:0;
+        box-shadow: #ccc 0 0 20px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="puzzle-container">
+      <div id="coffey-page" style="display:none"></div>
+      <div id="puzzle"></div>
+    </div>
+    <div id="puzzle-footer">
+      <input type="button" id="puzzle-next-btn" value=""></input>
+    </div>
+  </body>
+</html>
