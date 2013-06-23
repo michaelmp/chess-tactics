@@ -16,6 +16,7 @@ $(document).ready(function() {
   var coffeyDiv = $("#coffey-page");
   var puzzleDiv = $("#puzzle");
   var puzzles = {};
+  var selected = {};
   var answered = 0;
   var startTime = Date.now();
 
@@ -40,15 +41,9 @@ $(document).ready(function() {
   
 
   function nextPuzzle() {
-    /*
-    var avgTime;
-    answered++;
-    avgTime = (Date.now - startTime) / (1000 * answered);
-    $('#puzzle-time').text(avgTime);
-    */
-    puzzleDiv.animate({'opacity':0}, 200, function() {
+    puzzleDiv.animate({'opacity':0}, 100, function() {
       puzzleDiv.html(puzzles['black1'][getRandomInt(0, puzzles['black1'].length - 1)]);
-      puzzleDiv.animate({'opacity':1}, 200);
+      puzzleDiv.animate({'opacity':1}, 100);
     });
   }
 
@@ -61,6 +56,20 @@ $(document).ready(function() {
     };
   }
 
-  $("#puzzle-next-btn").click(debounce(nextPuzzle,200));
+  $("#puzzle-next-btn").click(debounce(nextPuzzle,0));
+
+  ['1w', '2w', '3w', '1b', '2b', '3b'].forEach(function(type) {
+    $('#puzzle-'+type).click(function() {
+      if (selected[type]) {
+        delete selected[type];
+        $(this).removeClass('selected');
+      } else {
+        selected[type] = true;
+        $(this).addClass('selected');
+      }
+    });
+  });
+
+  $('#puzzle-1w').click();
 
 });

@@ -18,7 +18,8 @@
         margin-bottom: 2em;
       }
       #puzzle-next-btn:hover {
-        box-shadow: blue 0 0 5px;
+        box-shadow: blue 0 0 10px;
+        cursor: pointer;
       }
       #puzzle-footer {
         position: fixed;
@@ -37,9 +38,64 @@
         box-shadow: #ccc 0 0 20px;
         margin: 0 auto;
       }
+      .btn {
+        border-radius: 40px;
+        border: 1px solid;
+        text-align: center;
+        font-size: 16px;
+        padding: 20px;
+        font-family: sans-serif;
+        margin: 1em;
+      }
+      .btn:hover {
+        cursor: pointer;
+      }
+      .btn.white {
+        color: #aaa;
+        border-color: #888;
+        box-shadow: #666 0 0 10px;
+        background-color: #eee;
+      }
+      .btn.black {
+        color: #ccc;
+        border-color: #777;
+        box-shadow: #666 0 0 10px;
+        background-color: #aaa;
+      }
+      .btn.selected, .btn:hover {
+        box-shadow: blue 0 0 10px;
+      }
+      .btn.white.selected, .btn.white:hover {
+        text-shadow: #666 0 0 2px;
+        background-color: #ccf;
+        color: black;
+      }
+      .btn.black.selected, .btn.black:hover {
+        text-shadow: white 0 0 2px;
+        background-color: #336;
+        color: white;
+      }
+      #puzzle-toolbar-left {
+        float: left;
+        margin-left: 1em;
+      }
+      #puzzle-toolbar-right {
+        float: right;
+        margin-right: 1em;
+      }
     </style>
   </head>
   <body>
+    <div id="puzzle-toolbar-left">
+      <div class="btn white" id="puzzle-1w" value=""></div>
+      <div class="btn white" id="puzzle-2w" value=""></div>
+      <div class="btn white" id="puzzle-3w" value=""></div>
+    </div>
+    <div id="puzzle-toolbar-right">
+      <div class="btn black" id="puzzle-1b" value=""></div>
+      <div class="btn black" id="puzzle-2b" value=""></div>
+      <div class="btn black" id="puzzle-3b" value=""></div>
+    </div>
     <div id="puzzle-container">
       <div id="coffey-page" style="display:none"></div>
       <div id="puzzle"></div>
