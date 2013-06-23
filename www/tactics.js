@@ -6,10 +6,10 @@
 
 $(document).ready(function() {
   var coffeySrces = {
-    black1: [
+    b1: [
       "1b.htm",
     ],
-    white1: [
+    w1: [
       "1w.htm",
     ],
   };
@@ -41,8 +41,17 @@ $(document).ready(function() {
   
 
   function nextPuzzle() {
+    var types = Object.keys(selected);
+    var typeIdx = getRandomInt(0, types.length - 1);
+    var typeKey = types[typeIdx];
+    var puzzlesAry = puzzles[typeKey[1]+typeKey[0]];
+    if (typeKey[1]=='w') {
+
+    } else {
+
+    }
     puzzleDiv.animate({'opacity':0}, 100, function() {
-      puzzleDiv.html(puzzles['black1'][getRandomInt(0, puzzles['black1'].length - 1)]);
+      puzzleDiv.html(puzzlesAry[getRandomInt(0, puzzlesAry.length - 1)]);
       puzzleDiv.animate({'opacity':1}, 100);
     });
   }
