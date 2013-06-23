@@ -20,18 +20,19 @@ $(document).ready(function() {
     "1w11.htm",
     "1w12.htm",
     "1w13.htm",
-
   ];
   var coffeyDiv = $("#coffey-page");
   var puzzleDiv = $("#puzzle");
   var puzzles = [];
+  var answered = 0;
+  var startTime = Date.now();
 
   function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
   coffeySrces.forEach(function(coffeySrc) {
-    coffeyDiv.load(coffeySrc+" table", function() {
+    coffeyDiv.append('<div>').load(coffeySrc+" table", function() {
       coffeyDiv.find("tr").find("td").find("a").remove();
       coffeyDiv.find("tr").find("td").find("br").remove();
       coffeyDiv.find("tr").find("td").each(function() {
@@ -41,8 +42,15 @@ $(document).ready(function() {
       });
     });
   });
+  
 
   function nextPuzzle() {
+    /*
+    var avgTime;
+    answered++;
+    avgTime = (Date.now - startTime) / (1000 * answered);
+    $('#puzzle-time').text(avgTime);
+    */
     puzzleDiv.animate({'opacity':0}, 200, function() {
       puzzleDiv.html(puzzles[getRandomInt(0, puzzles.length - 1)]);
       puzzleDiv.animate({'opacity':1}, 200);
