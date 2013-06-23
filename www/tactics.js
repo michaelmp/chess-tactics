@@ -46,9 +46,11 @@ $(document).ready(function() {
     var typeKey = types[typeIdx];
     var puzzlesAry = puzzles[typeKey[1]+typeKey[0]];
     if (typeKey[1]=='w') {
-
+      $('#puzzle-white-move').show();
+      $('#puzzle-black-move').hide();
     } else {
-
+      $('#puzzle-black-move').show();
+      $('#puzzle-white-move').hide();
     }
     puzzleDiv.animate({'opacity':0}, 100, function() {
       puzzleDiv.html(puzzlesAry[getRandomInt(0, puzzlesAry.length - 1)]);
@@ -70,7 +72,7 @@ $(document).ready(function() {
   ['1w', '2w', '3w', '1b', '2b', '3b'].forEach(function(type) {
     $('#puzzle-'+type).click(function() {
       if (selected[type]) {
-        delete selected[type];
+        selected[type] = false;
         $(this).removeClass('selected');
       } else {
         selected[type] = true;

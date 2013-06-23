@@ -83,6 +83,12 @@
         float: right;
         margin-right: 1em;
       }
+      #puzzle-white-move, #puzzle-black-move {
+        font-family: sans-serif;
+        font-size: smaller;
+        text-align: center;
+        margin-top: 0.5em;
+      }
     </style>
   </head>
   <body>
@@ -99,6 +105,8 @@
     <div id="puzzle-container">
       <div id="coffey-page" style="display:none"></div>
       <div id="puzzle"></div>
+      <div id="puzzle-white-move" style="display:none">White to move.</div>
+      <div id="puzzle-black-move" style="display:none">Black to move.</div>
     </div>
     <div id="puzzle-footer">
       <input type="button" id="puzzle-next-btn" value=""></input>
