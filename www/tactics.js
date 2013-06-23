@@ -5,25 +5,17 @@
  */
 
 $(document).ready(function() {
-  var coffeySrces = [
-    "1w.htm",
-    "1w1.htm",
-    "1w2.htm",
-    "1w3.htm",
-    "1w4.htm",
-    "1w5.htm",
-    "1w6.htm",
-    "1w7.htm",
-    "1w8.htm",
-    "1w9.htm",
-    "1w10.htm",
-    "1w11.htm",
-    "1w12.htm",
-    "1w13.htm",
-  ];
+  var coffeySrces = {
+    black1: [
+      "1b.htm",
+    ],
+    white1: [
+      "1w.htm",
+    ],
+  };
   var coffeyDiv = $("#coffey-page");
   var puzzleDiv = $("#puzzle");
-  var puzzles = [];
+  var puzzles = {};
   var answered = 0;
   var startTime = Date.now();
 
@@ -31,14 +23,17 @@ $(document).ready(function() {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
-  coffeySrces.forEach(function(coffeySrc) {
-    coffeyDiv.append('<div>').load(coffeySrc+" table", function() {
-      coffeyDiv.find("tr").find("td").find("a").remove();
-      coffeyDiv.find("tr").find("td").find("br").remove();
-      coffeyDiv.find("tr").find("td").each(function() {
-        if ($(this).find("img").length > 0) {
-          puzzles.push($(this).html());
-        }
+  Object.keys(coffeySrces).forEach(function(type) {
+    coffeySrces[type].forEach(function(coffeySrc) {
+      coffeyDiv.append('<div>').load(coffeySrc+" table", function() {
+        coffeyDiv.find("tr").find("td").find("a").remove();
+        coffeyDiv.find("tr").find("td").find("br").remove();
+        coffeyDiv.find("tr").find("td").each(function() {
+          if ($(this).find("img").length > 0) {
+            puzzles[type] = puzzles[type] || [];
+            puzzles[type].push($(this).html());
+          }
+        });
       });
     });
   });
@@ -52,7 +47,7 @@ $(document).ready(function() {
     $('#puzzle-time').text(avgTime);
     */
     puzzleDiv.animate({'opacity':0}, 200, function() {
-      puzzleDiv.html(puzzles[getRandomInt(0, puzzles.length - 1)]);
+      puzzleDiv.html(puzzles['black1'][getRandomInt(0, puzzles['black1'].length - 1)]);
       puzzleDiv.animate({'opacity':1}, 200);
     });
   }
