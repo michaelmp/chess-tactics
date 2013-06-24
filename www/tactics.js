@@ -9,8 +9,20 @@ $(document).ready(function() {
     b1: [
       "1b.htm",
     ],
+    b2: [
+      "2b.htm",
+    ],
+    b3: [
+      "3b.htm",
+    ],
     w1: [
       "1w.htm",
+    ],
+    w2: [
+      "2w.htm",
+    ],
+    w3: [
+      "3b.htm",
     ],
   };
   var coffeyDiv = $("#coffey-page");
