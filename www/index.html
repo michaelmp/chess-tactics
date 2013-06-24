@@ -10,7 +10,7 @@
       }
       #puzzle-container {
         margin:2em auto;
-        width: 20em;
+        width: 400px;
       }
       #puzzle-next-btn {
         height: 3em;
@@ -92,10 +92,14 @@
         margin-right: 1em;
       }
       #puzzle-white-move, #puzzle-black-move {
-        font-family: sans-serif;
-        font-size: smaller;
-        text-align: center;
-        margin-top: 0.5em;
+        margin: 0;
+        padding: 0;
+        color: black;
+        text-shadow: red 0 0 0px;
+      }
+      #puzzle-white-move.lit, #puzzle-black-move.lit {
+        color: red;
+        text-shadow: red 0 0 15px;
       }
     </style>
   </head>
@@ -112,9 +116,9 @@
     </div>
     <div id="puzzle-container">
       <div id="coffey-page" style="display:none"></div>
+      <div id="puzzle-black-move">&#x25cf;</div>
       <div id="puzzle"></div>
-      <div id="puzzle-white-move" style="display:none">White to move.</div>
-      <div id="puzzle-black-move" style="display:none">Black to move.</div>
+      <div id="puzzle-white-move">&#x25cf;</div>
     </div>
     <div id="puzzle-footer">
       <input type="button" id="puzzle-next-btn" value=""></input>
