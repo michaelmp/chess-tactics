@@ -41,7 +41,7 @@ $(document).ready(function() {
   
 
   function nextPuzzle() {
-    var types = Object.keys(selected);
+    var types = Object.keys(selected).filter(function(key){return selected[key];});
     var typeIdx = getRandomInt(0, types.length - 1);
     var typeKey = types[typeIdx];
     var puzzlesAry = puzzles[typeKey[1]+typeKey[0]];
