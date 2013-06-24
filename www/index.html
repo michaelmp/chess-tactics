@@ -46,6 +46,10 @@
         padding: 20px;
         font-family: sans-serif;
         margin: 1em;
+        -moz-transition: box-shadow 2s, -moz-transform 2s;
+        -webkit-transition: box-shadow 2s, -webkit-transform 2s;
+        -o-transition: box-shadow 2s, -o-transform 2s;
+        transition: box-shadow 2s, transform 2s;
       }
       .btn:hover {
         cursor: pointer;
@@ -64,6 +68,10 @@
       }
       .btn.selected, .btn:hover {
         box-shadow: blue 0 0 10px;
+        -moz-transition: box-shadow 0.5s, -moz-transform 0.5s;
+        -webkit-transition: box-shadow 0.5s, -webkit-transform 0.5s;
+        -o-transition: box-shadow 0.5s, -o-transform 0.5s;
+        transition: box-shadow 0.5s, transform 0.5s;
       }
       .btn.white.selected {
         text-shadow: #666 0 0 2px;

@@ -22,7 +22,7 @@ $(document).ready(function() {
       "2w.htm",
     ],
     w3: [
-      "3b.htm",
+      "3w.htm",
     ],
   };
   var coffeyDiv = $("#coffey-page");
