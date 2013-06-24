@@ -41,10 +41,11 @@ $(document).ready(function() {
   
 
   function nextPuzzle() {
-    var types = Object.keys(selected).filter(function(key){return selected[key];});
+    var types = Object.keys(selected).filter(function(key){return !!selected[key];});
     var typeIdx = getRandomInt(0, types.length - 1);
     var typeKey = types[typeIdx];
     var puzzlesAry = puzzles[typeKey[1]+typeKey[0]];
+    var nextPuzzle = puzzlesAry[getRandomInt(0, puzzlesAry.length - 1)];
     if (typeKey[1]=='w') {
       $('#puzzle-white-move').show();
       $('#puzzle-black-move').hide();
@@ -52,8 +53,9 @@ $(document).ready(function() {
       $('#puzzle-black-move').show();
       $('#puzzle-white-move').hide();
     }
+    puzzleDiv.show();
     puzzleDiv.animate({'opacity':0}, 100, function() {
-      puzzleDiv.html(puzzlesAry[getRandomInt(0, puzzlesAry.length - 1)]);
+      puzzleDiv.html(nextPuzzle);
       puzzleDiv.animate({'opacity':1}, 100);
     });
   }
