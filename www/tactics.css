@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+}
+
+#puzzle-container {
+  margin:2em auto;
+  width: 400px;
+}
+
+#puzzle-next-btn {
+  height: 3em;
+  width: 15em;
+  margin-bottom: 2em;
+}
+
+#puzzle-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+}
+
+#puzzle {
+  border: 1px dotted #888;
+  width: 264px;
+  height: 264px;
+  overflow: hidden;
+  letter-spacing: 0;
+  line-height:0;
+  margin: 0 auto;
+}
+
+.btn {
+  border-radius: 40px;
+  border: 1px solid;
+  text-align: center;
+  font-size: 16px;
+  padding: 20px;
+  font-family: sans-serif;
+  margin: 1em;
+  -moz-transition: box-shadow 2s, -moz-transform 2s;
+  -webkit-transition: box-shadow 2s, -webkit-transform 2s;
+  -o-transition: box-shadow 2s, -o-transform 2s;
+  transition: box-shadow 2s, transform 2s;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+#puzzle-toolbar-left {
+  float: left;
+  margin-left: 1em;
+}
+
+#puzzle-toolbar-right {
+  float: right;
+  margin-right: 1em;
+}
+
+#puzzle-white-move, #puzzle-black-move {
+  margin: 0;
+  padding: 0;
+  color: black;
+  text-shadow: red 0 0 0px;
+  -moz-transition: box-shadow 2s, color 1s, -moz-transform 2s;
+  -webkit-transition: box-shadow 2s, color 1s, -webkit-transform 2s;
+  -o-transition: box-shadow 2s, color 1s, -o-transform 2s;
+  transition: box-shadow 2s, color 1s, transform 2s;
+}
+
+#puzzle-white-move.lit, #puzzle-black-move.lit {
+  color: red;
+  text-shadow: red 0 0 30px;
+  -moz-transition: box-shadow 0.5s, color 0.5s, -moz-transform 0.5s;
+  -webkit-transition: box-shadow 0.5s, color 0.5s, -webkit-transform 0.5s;
+  -o-transition: box-shadow 0.5s, color 0.5s, -o-transform 0.5s;
+  transition: box-shadow 0.5s, color 0.5s, transform 0.5s;
+}

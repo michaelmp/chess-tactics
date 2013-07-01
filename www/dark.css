@@ -1,0 +1,47 @@
+body {
+  background-color: #300;
+}
+
+#puzzle-next-btn:hover {
+  box-shadow: white 0 0 20px;
+  cursor: pointer;
+}
+
+.btn.white {
+  color: #aaa;
+  border-width: 0;
+  border-color: #444;
+  box-shadow: #666 0 0 20px;
+  background-color: #eee;
+}
+.btn.black {
+  color: #ccc;
+  border-width: 0;
+  border-color: #444;
+  box-shadow: #666 0 0 20px;
+  background-color: #888;
+}
+
+.btn.selected {
+  -moz-transition: box-shadow 0.5s, -moz-transform 0.5s;
+  -webkit-transition: box-shadow 0.5s, -webkit-transform 0.5s;
+  -o-transition: box-shadow 0.5s, -o-transform 0.5s;
+  transition: box-shadow 0.5s, transform 0.5s;
+}
+
+.btn.white.selected {
+  box-shadow: #fd4 0 0 20px;
+}
+.btn.black.selected {
+  box-shadow: #ccf 0 0 20px;
+}
+.btn.white.selected {
+  text-shadow: #666 0 0 2px;
+  background-color: #fd4;
+  color: black;
+}
+.btn.black.selected {
+  text-shadow: white 0 0 2px;
+  background-color: #ccf;
+  color: white;
+}

@@ -1,0 +1,42 @@
+body {
+  background-color: white;
+}
+
+#puzzle {
+  box-shadow: #ccc 0 0 20px;
+}
+
+#puzzle-next-btn:hover {
+  box-shadow: blue 0 0 10px;
+  cursor: pointer;
+}
+
+.btn.white {
+  color: #aaa;
+  border-color: #888;
+  box-shadow: #666 0 0 10px;
+  background-color: #eee;
+}
+.btn.black {
+  color: #ccc;
+  border-color: #777;
+  box-shadow: #666 0 0 10px;
+  background-color: #aaa;
+}
+.btn.selected, .btn:hover {
+  box-shadow: blue 0 0 10px;
+  -moz-transition: box-shadow 0.5s, -moz-transform 0.5s;
+  -webkit-transition: box-shadow 0.5s, -webkit-transform 0.5s;
+  -o-transition: box-shadow 0.5s, -o-transform 0.5s;
+  transition: box-shadow 0.5s, transform 0.5s;
+}
+.btn.white.selected {
+  text-shadow: #666 0 0 2px;
+  background-color: #ccf;
+  color: black;
+}
+.btn.black.selected {
+  text-shadow: white 0 0 2px;
+  background-color: #336;
+  color: white;
+}
