@@ -19,7 +19,18 @@ $(document).ready(function() {
       "1w.htm",
     ],
     w2: [
-      "2w.htm",
+      "2w.htm",/*
+      "2w1.htm",
+      "2w2.htm",
+      "2w3.htm",
+      "2w4.htm",
+      "2w5.htm",
+      "2w6.htm",
+      "2w7.htm",
+      "2w8.htm",
+      "2w9.htm",
+      "2w10.htm",
+      "2w11.htm",*/
     ],
     w3: [
       "3w.htm",

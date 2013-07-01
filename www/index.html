@@ -1,106 +1,11 @@
 <!doctype html>
 <html>
   <head>
-    <link href="" rel="stylesheet" media="screen" type="text/css" />
+    <link href="tactics.css" rel="stylesheet" media="screen" type="text/css" />
+    <link href="light.css" rel="stylesheet" media="screen" type="text/css" />
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script src="tactics.js"></script>
     <style>
-      body {
-        margin: 0;
-      }
-      #puzzle-container {
-        margin:2em auto;
-        width: 400px;
-      }
-      #puzzle-next-btn {
-        height: 3em;
-        width: 15em;
-        margin-bottom: 2em;
-      }
-      #puzzle-next-btn:hover {
-        box-shadow: blue 0 0 10px;
-        cursor: pointer;
-      }
-      #puzzle-footer {
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        text-align: center;
-        margin: 0;
-      }
-      #puzzle {
-        border: 1px dotted #888;
-        width: 264px;
-        height: 264px;
-        overflow: hidden;
-        letter-spacing: 0;
-        line-height:0;
-        box-shadow: #ccc 0 0 20px;
-        margin: 0 auto;
-      }
-      .btn {
-        border-radius: 40px;
-        border: 1px solid;
-        text-align: center;
-        font-size: 16px;
-        padding: 20px;
-        font-family: sans-serif;
-        margin: 1em;
-        -moz-transition: box-shadow 2s, -moz-transform 2s;
-        -webkit-transition: box-shadow 2s, -webkit-transform 2s;
-        -o-transition: box-shadow 2s, -o-transform 2s;
-        transition: box-shadow 2s, transform 2s;
-      }
-      .btn:hover {
-        cursor: pointer;
-      }
-      .btn.white {
-        color: #aaa;
-        border-color: #888;
-        box-shadow: #666 0 0 10px;
-        background-color: #eee;
-      }
-      .btn.black {
-        color: #ccc;
-        border-color: #777;
-        box-shadow: #666 0 0 10px;
-        background-color: #aaa;
-      }
-      .btn.selected, .btn:hover {
-        box-shadow: blue 0 0 10px;
-        -moz-transition: box-shadow 0.5s, -moz-transform 0.5s;
-        -webkit-transition: box-shadow 0.5s, -webkit-transform 0.5s;
-        -o-transition: box-shadow 0.5s, -o-transform 0.5s;
-        transition: box-shadow 0.5s, transform 0.5s;
-      }
-      .btn.white.selected {
-        text-shadow: #666 0 0 2px;
-        background-color: #ccf;
-        color: black;
-      }
-      .btn.black.selected {
-        text-shadow: white 0 0 2px;
-        background-color: #336;
-        color: white;
-      }
-      #puzzle-toolbar-left {
-        float: left;
-        margin-left: 1em;
-      }
-      #puzzle-toolbar-right {
-        float: right;
-        margin-right: 1em;
-      }
-      #puzzle-white-move, #puzzle-black-move {
-        margin: 0;
-        padding: 0;
-        color: black;
-        text-shadow: red 0 0 0px;
-      }
-      #puzzle-white-move.lit, #puzzle-black-move.lit {
-        color: red;
-        text-shadow: red 0 0 15px;
-      }
     </style>
   </head>
   <body>
