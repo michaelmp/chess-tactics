@@ -13,15 +13,15 @@ body {
 
 .btn.white {
   color: #aaa;
-  border-color: #888;
-  box-shadow: #666 0 0 10px;
+  border-color: #999;
+  box-shadow: #aaa 0 0 10px;
   background-color: #eee;
 }
 .btn.black {
-  color: #ccc;
-  border-color: #777;
-  box-shadow: #666 0 0 10px;
-  background-color: #aaa;
+  color: #eee;
+  border-color: #999;
+  box-shadow: #aaa 0 0 10px;
+  background-color: #ccc;
 }
 .btn.selected, .btn:hover {
   box-shadow: blue 0 0 10px;

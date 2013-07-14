@@ -70,11 +70,11 @@ $(document).ready(function() {
     var puzzlesAry = puzzles[typeKey[1]+typeKey[0]];
     var nextPuzzle = puzzlesAry[getRandomInt(0, puzzlesAry.length - 1)];
     if (typeKey[1]=='w') {
-      $('#puzzle-white-move').addClass('lit');
-      $('#puzzle-black-move').removeClass('lit');
+      $('#puzzle-white-move').show();
+      $('#puzzle-black-move').hide();
     } else {
-      $('#puzzle-black-move').addClass('lit');
-      $('#puzzle-white-move').removeClass('lit');
+      $('#puzzle-black-move').show();
+      $('#puzzle-white-move').hide();
     }
     puzzleDiv.show();
     puzzleDiv.animate({'opacity':0}, 100, function() {
