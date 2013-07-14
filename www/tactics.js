@@ -92,7 +92,7 @@ $(document).ready(function() {
     };
   }
 
-  $("#puzzle-next-btn").click(debounce(nextPuzzle,0));
+  $("#puzzle").click(debounce(nextPuzzle,0));
 
   ['1w', '2w', '3w', '1b', '2b', '3b'].forEach(function(type) {
     $('#puzzle-'+type).click(function() {

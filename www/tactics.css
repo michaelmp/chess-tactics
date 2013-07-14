@@ -7,12 +7,6 @@ body {
   width: 400px;
 }
 
-#puzzle-next-btn {
-  height: 3em;
-  width: 15em;
-  margin-bottom: 2em;
-}
-
 #puzzle-footer {
   position: fixed;
   bottom: 0;
@@ -31,12 +25,16 @@ body {
   margin: 0 auto;
 }
 
+#puzzle:hover {
+  cursor: pointer;
+}
+
 .btn {
-  border-radius: 40px;
+  border-radius: 60px;
   border: 1px solid;
   text-align: center;
-  font-size: 16px;
-  padding: 20px;
+  font-size: 18px;
+  padding: 30px;
   font-family: sans-serif;
   margin: 1em;
   -moz-transition: box-shadow 2s, -moz-transform 2s;
